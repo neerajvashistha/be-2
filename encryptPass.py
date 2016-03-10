@@ -2,25 +2,33 @@ import hashlib
 import sys
 import os
 import binascii
+
 try:
     hash_name = sys.argv[1]
 except IndexError:
-    print 'Specify the hash name as the first argument.'
+    print('1st arg\n'+ str(hashlib.algorithms_guaranteed)+'\n2nd arg username','\n3rd arg password')
 else:
     try:
-        data = sys.argv[2]
+        username = sys.argv[2] 
+        passwd = sys.argv[3]
+        password = bytes(passwd,'UTF-8')      
     except IndexError:    
-        data = '''Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-sunt in culpa qui officia deserunt mollit anim id est laborum.'''
+        print('using default password: password')
+        password = b'password'
 
-    salt = os.urandom(64)
-    print salt
-    h = hashlib.new(hash_name)
-    h.update(data)
-    print h.hexdigest()
-    dk = hashlib.pbkdf2_hmac(hash_name, binascii.b2a_base64(h), binascii.b2a_base64(salt), 100000,128)
-    print binascii.hexlify(dk)
+
+
+    salt = os.urandom(32)
+    chef_salt = binascii.hexlify(salt)
+    filename = username+"_salt.key"
+    salT_file = open(username+"_salt.key","w")
+    print("Salt\n"+chef_salt.decode('utf-8'))
+    salT_file.write(chef_salt.decode('utf-8'))
+    salT_file.close()
+    dk = hashlib.pbkdf2_hmac(hash_name, password, chef_salt, 100000,128)
+    store_hash = binascii.hexlify(dk)
+    filename = username+"_hash.hash"
+    hash_file = open(username+"_hash.hash","w")
+    print("hash\n"+store_hash.decode('utf-8'))
+    hash_file.write(store_hash.decode('utf-8'))
+    hash_file.close()
