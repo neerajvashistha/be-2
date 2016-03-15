@@ -29,7 +29,7 @@ public class Client {
             print(n1,n2);
 
         } else {
-            System.out.println("Usage: java Client int1 int2 ");
+            System.out.println("java Client int1<-7 to 7> int2<-7 to 7>");
             System.out.println("\nFor example: java Client 7 -7 ");
             System.out.println("\nYou will get the output like the following: \n");
             print(n1,n2);
@@ -48,11 +48,33 @@ public class Client {
         }
         }catch(Exception e) {
             System.out.println("Remote method exception thrown: " + e.getMessage());
-        }
-        
-
-
-
-        
+        }        
     }
 }
+/*
+cipher@blackfury-HP-eNVy:~/be-2/boothmul$ java Client
+Usage: java Client int1<-7 to 7> int2<-7 to 7>
+
+For example: java Client 7 -7 
+
+You will get the output like the following: 
+
+A[0, 1, 1, 1, 0, 0, 0, 0, 0]
+O[1, 0, 0, 1, 0, 0, 0, 0, 0]
+P[1, 1, 0, 0, 1, 1, 1, 1, 1]
+P0[1, 1, 0, 0, 1, 1, 1, 1, 1]
+P1[1, 1, 0, 0, 1, 1, 1, 1, 1]
+P2[1, 1, 0, 0, 1, 1, 1, 1, 1]
+P3[1, 1, 0, 0, 1, 1, 1, 1, 1]
+Result[-49]
+cipher@blackfury-HP-eNVy:~/be-2/A3$ java Client 5 6
+A[0, 1, 0, 1, 0, 0, 0, 0, 0]
+O[1, 0, 1, 1, 0, 0, 0, 0, 0]
+P[0, 0, 0, 1, 1, 1, 1, 0, 0]
+P0[0, 0, 0, 1, 1, 1, 1, 0, 0]
+P1[0, 0, 0, 1, 1, 1, 1, 0, 0]
+P2[0, 0, 0, 1, 1, 1, 1, 0, 0]
+P3[0, 0, 0, 1, 1, 1, 1, 0, 0]
+Result[30]
+
+*/

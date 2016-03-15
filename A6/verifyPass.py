@@ -58,4 +58,19 @@ hash
 Incorrect username or password
 envy@envy-vm:~/be-2$ 
 envy@envy-vm:~/be-2$ 
+
+Algo
+
+To Store a Password
+
+	1.Generate a long random salt using a CSPRNG.
+	2.generate hash using standard cryptographic hash function such as SHA256
+	3.key stretching using  PBKDF2 inpust name = standard cryptographic hash function such as SHA256, password = hash generated, salt = salt, round = 10000 aleast, dklen = 64 atleast length of derived key
+	4.Save both the salt and the hash in the user's database record.
+	
+To Validate a Password
+
+	1.Retrieve the user's salt and hash from the database.
+	2.Prepend the salt to the given password and hash it using the same hash function.
+	3.Compare the hash of the given password with the hash from the database. If they match, the password is correct. Otherwise, the password is incorrect.
 '''
