@@ -52,7 +52,9 @@ public class Client {
     }
 }
 /*
-cipher@blackfury-HP-eNVy:~/be-2/boothmul$ java Client
+cipher@blackfury-HP-eNVy:~/be-2/A3$ java Server 
+Server is ready to listen... 
+cipher@blackfury-HP-eNVy:~/be-2/A3$ java Client
 Usage: java Client int1<-7 to 7> int2<-7 to 7>
 
 For example: java Client 7 -7 
