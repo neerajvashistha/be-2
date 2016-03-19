@@ -1,6 +1,9 @@
-# How to
+# how-to
 
-Create a new Android Application Project.  Let's say your Application Name is "Calculator", your Project Name is "Calculator", and your Package Name is "com.example.calculator".  Setup the project with the default settings.  Now replace MainActivity.java, activity_main.xml_ (in res/layout), & strings.xml  (in res/values) with the code below.  Next, create a new class "CalculatorBrain" and replace CalculatorBrain.java with the code below.  
+Create a new Android Application Project.  Let's say your Application Name is "Calculator", your Project Name is "Calculator", and your Package Name is "com.example.calculator".  Setup the project with the default settings.  Now replace MainActivity.java, activity_main.xml (in res/layout), & strings.xml  (in res/values) with the code below.  Next, create a new class "CalculatorBrain" and replace CalculatorBrain.java with the code below.  
+
+compileSdkVersion 23
+buildToolsVersion "21.1.2"
 
 The calculator should run without errors! 
 MainActivity.java
