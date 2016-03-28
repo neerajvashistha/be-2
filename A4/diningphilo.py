@@ -8,8 +8,7 @@ import time
 # Procedure is to do block while waiting to get first fork, and a nonblocking
 # acquire of second fork.  If failed to get second fork, release first fork,
 # swap which fork is first and which is second and retry until getting both.
-#  
-# See discussion page note about 'live lock'.
+
  
 class Philosopher(threading.Thread):
  
@@ -60,7 +59,7 @@ def DiningPhilosophers():
     random.seed(507129)
     Philosopher.running = True
     for p in philosophers: p.start()
-    time.sleep(100)
+    time.sleep(20)
     Philosopher.running = False
     print ("Now we're finishing.")
     exit()
@@ -68,122 +67,28 @@ DiningPhilosophers()
 '''
 cipher@blackfury-HP-eNVy:~/be-2$ python diningphilo.py 
 Russel is hungry.
-Russel starts eating 
+Russel starts eating
 Aristotle is hungry.
 Marx is hungry.
 Marx swaps forks
 Kant is hungry.
-Kant starts eating 
+Kant starts eating
 Buddha is hungry.
 Russel finishes eating and leaves to think.
-Marx starts eating 
- Aristotle swaps forks
+Aristotle swaps forksMarx starts eating
+
 Kant finishes eating and leaves to think.
-Buddha swaps forks
- Aristotle starts eating 
+Buddha swaps forksAristotle starts eating
+
 Marx finishes eating and leaves to think.
-Buddha starts eating 
+Buddha starts eating
 Russel is hungry.
 Russel swaps forks
-Aristotle finishes eating and leaves to think.
-Russel starts eating 
-Buddha finishes eating and leaves to think.
-Marx is hungry.
-Marx swaps forks
-Russel finishes eating and leaves to think.
-Marx starts eating 
-Aristotle is hungry.
-Aristotle starts eating 
-Kant is hungry.
-Marx finishes eating and leaves to think.
-Buddha is hungry.
-Buddha starts eating 
-Russel is hungry.
-Russel swaps forks
-Buddha finishes eating and leaves to think.
-Aristotle finishes eating and leaves to think.
-Russel starts eating 
- Kant starts eating 
-Buddha is hungry.
-Marx is hungry.
-Marx swaps forks
-Aristotle is hungry.
-Kant finishes eating and leaves to think.
-Buddha starts eating 
-Russel finishes eating and leaves to think.
-Marx swaps forks
- Aristotle starts eating 
-Buddha finishes eating and leaves to think.
-Marx starts eating 
-Russel is hungry.
-Aristotle finishes eating and leaves to think.
-Marx finishes eating and leaves to think.
-Russel starts eating 
-Kant is hungry.
-Kant starts eating 
-Buddha is hungry.
-Aristotle is hungry.
-Marx is hungry.
-Marx swaps forks
-Kant finishes eating and leaves to think.
-Buddha starts eating 
-Russel finishes eating and leaves to think.
-Aristotle starts eating 
-Marx swaps forks
-Buddha finishes eating and leaves to think.
-Marx starts eating 
-Russel is hungry.
-Kant is hungry.
-Buddha is hungry.
-Buddha swaps forks
-Marx finishes eating and leaves to think.
-Russel swaps forks
- Buddha starts eating 
-Aristotle finishes eating and leaves to think.
-Kant swaps forks
- Russel starts eating 
-Buddha finishes eating and leaves to think.
-Kant starts eating 
-Marx is hungry.
-Marx swaps forks
-Russel finishes eating and leaves to think.
-Marx starts eating 
-Kant finishes eating and leaves to think.
-Aristotle is hungry.
-Aristotle starts eating 
-Buddha is hungry.
-Buddha swaps forks
-Marx finishes eating and leaves to think.
-Buddha starts eating 
-Kant is hungry.
-Buddha finishes eating and leaves to think.
-Aristotle finishes eating and leaves to think.
-Kant starts eating 
-Russel is hungry.
-Russel starts eating 
-Marx is hungry.
-Marx swaps forks
-Russel finishes eating and leaves to think.
-Marx starts eating 
-Kant finishes eating and leaves to think.
-Buddha is hungry.
-Buddha swaps forks
-Russel is hungry.
-Marx finishes eating and leaves to think.
-Buddha starts eating 
-Russel starts eating 
-Kant is hungry.
-Kant swaps forks
-Aristotle is hungry.
-Russel finishes eating and leaves to think.
-Aristotle starts eating 
-Buddha finishes eating and leaves to think.
-Kant swaps forks
 Now we're finishing.
 Aristotle finishes eating and leaves to think.
-Kant starts eating 
+Russel starts eating
+Buddha finishes eating and leaves to think.
+Russel finishes eating and leaves to think.
 Marx is hungry.
-Buddha is hungry.
-Kant finishes eating and leaves to think.
-Russel is hungry.
+Kant is hungry.
 '''

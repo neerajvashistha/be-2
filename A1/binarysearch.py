@@ -1,11 +1,12 @@
 def binarySearch(alist, item):
-    """binartsearch using divide and conqure(non-recursive).
+"""
+binartsearch using divide and conqure(non-recursive).
 
     @param: alist, unsorted list
     @param: item, an element to be searched in alist
 
     returns: bool, position, the presence of item in alist and position.
-    """
+"""
 	pos = 0
 	first = 0
 	found = False

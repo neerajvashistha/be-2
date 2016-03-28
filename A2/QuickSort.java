@@ -35,8 +35,7 @@ public class QuickSort {
 		
 	}
 	
-	private static void quicksort(int[] arr, int low, int high) 
-	{
+	private static void quicksort(int[] arr, int low, int high){
 		// TODO Auto-generated method stub
 		if (arr == null || arr.length == 0)
 			return;
@@ -52,18 +51,15 @@ public class QuickSort {
 		int i = low, j = high;
 		while (i <= j)//joparyant i ha less ahe j peksha or j ha greter ahe i peksha
 			{
-				while (arr[i] < pivot) 
-				{
+				while (arr[i] < pivot){
 					i++;
 				}
  
-				while (arr[j] > pivot) 
-				{
+				while (arr[j] > pivot){
 					j--;
 				}
  
-			if (i <= j) 
-			{
+			if (i <= j){
 				int temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
@@ -84,29 +80,31 @@ public class QuickSort {
 	{
 		try {
 
-					File fXmlFile = new File("input1.xml");//1
+				File fXmlFile = new File("input.xml");//1
 
-					DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();//2
-					
-					DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();//3
-					Document doc = dBuilder.parse(fXmlFile);//4
-							
-					doc.getDocumentElement().normalize();//5
-							
-					NodeList nList = doc.getElementsByTagName("number");//6
-							
-					for (int temp = 0; temp < nList.getLength(); temp++) {
-					
-						Node nNode = nList.item(temp);
-													
-						if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
-							Element eElement = (Element) nNode;
-							arr[temp] = Integer.parseInt(eElement.getElementsByTagName("value").item(0).getTextContent());
-						}
+				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();//2				
+				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();//3
+				Document doc = dBuilder.parse(fXmlFile);//4
+				doc.getDocumentElement().normalize();//5
+				NodeList nList = doc.getElementsByTagName("number");//6
+				for (int temp = 0; temp < nList.getLength(); temp++) {
+					Node nNode = nList.item(temp);
+					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+						Element eElement = (Element) nNode;
+						arr[temp] = Integer.parseInt(eElement.getElementsByTagName("value").item(0).getTextContent());
 					}
-		    } catch (Exception e) {
-			e.printStackTrace();
-		    }
+				}
+	    } catch (Exception e) {
+		e.printStackTrace();
+	    }
 	}
 }
+/*
+cipher@blackfury-HP-eNVy:~/be-2/A2$ javac QuickSort.java
+
+cipher@blackfury-HP-eNVy:~/be-2/A2$ java QuickSort
+Read data from xml[88, 10, 34, 67, 56]
+Array after sorting[10, 34, 56, 67, 88]
+
+cipher@blackfury-HP-eNVy:~/be-2/A2$ 
+*/
