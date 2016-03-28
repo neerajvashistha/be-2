@@ -69,40 +69,40 @@ public class IDS1 {
 		
 		//all button's action listeners
 		
-ids_on.addActionListener(new ActionListener() {
-	
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		ids_on.setVisible(false);
-		ids_off.setVisible(true);
-		exec_commands("sudo service psad start");
-		exec_commands("sudo service psad status");
-	}
-});
-
-ids_off.addActionListener(new ActionListener() {
-	
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		ids_on.setVisible(true);
-		ids_off.setVisible(false);
-		
-		exec_commands("sudo service psad stop");
-		exec_commands("sudo service psad status");
-	}
-});
-		
-disp_blocked_ip.addActionListener(new ActionListener() {
+		ids_on.addActionListener(new ActionListener() {
 			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				ids_on.setVisible(false);
+				ids_off.setVisible(true);
+				exec_commands("sudo service psad start");
+				exec_commands("sudo service psad status");
+			}
+		});
+
+		ids_off.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				ids_on.setVisible(true);
+				ids_off.setVisible(false);
+				
+				exec_commands("sudo service psad stop");
+				exec_commands("sudo service psad status");
+			}
+		});
+				
+		disp_blocked_ip.addActionListener(new ActionListener() {
+					
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				exec_commands("sudo iptables -L INPUT -v -n --line-numbers");
 				
 			}
 		});
-		
-disp_rules.addActionListener(new ActionListener() {
-			
+				
+		disp_rules.addActionListener(new ActionListener() {
+					
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				//exec_commands("sudo iptables -N TRAFFIC_ACCT");//own traffic chain in order to avoid changes in firewall rules
@@ -113,24 +113,24 @@ disp_rules.addActionListener(new ActionListener() {
 			}
 		});
 
-unblock_ip.addActionListener(new ActionListener() {
-	
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		String response = JOptionPane.showInputDialog(null,"Enter IP address",
-				  JOptionPane.QUESTION_MESSAGE);
-		exec_commands("sudo iptables -D INPUT -s "+response+" -j DROP");
-		
-	}
-});
-		
-			fr.setVisible(true);
-			fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		unblock_ip.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String response = JOptionPane.showInputDialog(null,"Enter IP address",
+						  JOptionPane.QUESTION_MESSAGE);
+				exec_commands("sudo iptables -D INPUT -s "+response+" -j DROP");
+				
+			}
+		});
+				
+		fr.setVisible(true);
+		fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	//Main method
 public static void main(String arr[]) throws Exception{
-IDS1 ids=new IDS1();
+	IDS1 ids=new IDS1();
 }
 
 //method for execute the commands
@@ -154,11 +154,10 @@ public void exec_commands(String cmd){
         //int exitVal = pr.waitFor();
        // System.out.println("Exited with error code "+exitVal);
        
-    } catch(Exception e) {
+    	} catch(Exception e) {
         System.out.println(e.toString());
         e.printStackTrace();
-    }
-}
-
+    	}
+	}
 }
 
