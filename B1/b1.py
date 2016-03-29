@@ -1,87 +1,41 @@
-import json
+"""
+Changes are in place function only:: Line Number:: 28,29, thats it
 
-def isattack(board,r,c):
-    for i in range(r):
-        if(board[i][c]==1):
-            return True
-    
-    i=r-1
-    j=c-1
-    while((i>=0) and (j>=0)):
-        if(board[i][j]==1):
-            return True
-        i=i-1
-        j=j-1
-    
-    i=r-1
-    j=c+1
-    while((i>=0) and (j<8)):
-        if(board[i][j]==1):
-            return True
-        i=i-1
-        j=j+1
-    return False
-    
-def solve(board,row):
-    i=0
-    while(i<8):
-        if(not isattack(board, row, i)):
-            board[row][i]=1
-            if(row==7):
-                return True
-            else:
-                if(solve(board, row+1)):
-                    return True
-                else:
-                    board[row][i]=0
-        i=i+1
-    
-    if(i==8):
-        return False
-    
-def printboard(board):
+"""
+import json
+inf=open("8q.json")
+board=json.loads(inf.read())
+board=board["matrix"]
+for i in board:
+    print(i)
+
+def issafe(row,col):
     for i in range(8):
         for j in range(8):
-            print str(board[i][j])+"  ",
-        print "\n"
-        
-board = [[0 for x in range(8)] for x in range(8)]
-
-if __name__ == '__main__':
-    data=[]
-    with open('input.json') as f:
-        data=json.load(f)
-    
-    if(data["start"]<0 or data["start"]>7):
-        print "Invalid JSON input"
-        exit()
-    
-    board[0][data["start"]]=1
-    if(solve(board, 1)):
-        print "Queens problem solved!!!"
-        print "Board Configuration:"
-        printboard(board)
-    else:
-        print "Queens problem not solved!!!"
-    
-'''
-cipher@black:~/be-2/B1$ python b1.py 
-Queens problem solved!!!
-Board Configuration:
-0   0   0   0   0   0   1   0   
-
-1   0   0   0   0   0   0   0   
-
-0   0   1   0   0   0   0   0   
-
-0   0   0   0   0   0   0   1   
-
-0   0   0   0   0   1   0   0   
-
-0   0   0   1   0   0   0   0   
-
-0   1   0   0   0   0   0   0   
-
-0   0   0   0   1   0   0   0   
-
-'''
+            if(board[i][j]==1): #if a queen exists here, then check if it attacks our queen
+                if(row==i):
+                    return False
+                if(col==j):
+                    return False
+                if(abs(row-i)==abs(col-j)):
+                    return False
+    return True
+def place(col):
+    if(col>=8):     #if all 8 queens are placed, then finish
+        print("\t\tCompleted...")
+        return True
+    for i in range(8):  #checking for all rows in that column
+        if(board[i][col]==1):   #if a queen is already placed here,
+            return place(col+1) #then simply place for next column
+        if(issafe(i,col)):  #is it safe?
+            board[i][col]=1 #queen is placed here
+            if(place(col+1)==True): #recursive call to place next queen
+                return True
+            board[i][col]=0     #if not placed, then backtrack, i.e it sets to zero and the loop iterates to check for next position
+    return False
+if(place(0)==True):
+    print("solution found")
+else:
+    print("Solution not possible")
+for i in board:
+    print(i)
