@@ -6,5 +6,5 @@ Following are the contributes:
 
 - Piyush Galphat
 - Pravin Maske
-- Tanvi Medendar
+- Tanvi Madhekar
 - Neha Papat
