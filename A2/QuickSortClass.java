@@ -4,7 +4,7 @@ public class QuickSortClass implements Runnable {
 	int a[];
 	int start,end;
 	int pivot;
-	final int thrsholdSize=200;
+	final int thrsholdSize=10;
 
 	public QuickSortClass(int a[],int start,int end)
 	{

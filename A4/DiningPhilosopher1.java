@@ -1,12 +1,11 @@
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.*;
+//import java.util.concurrent.locks.Lock;
+//import java.util.concurrent.locks.ReentrantLock;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
 import com.mongodb.*;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
+
 
 
 public class DiningPhilosopher1 {

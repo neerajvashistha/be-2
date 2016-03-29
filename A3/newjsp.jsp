@@ -1,7 +1,7 @@
 <%-- 
     Document   : mypage
     Created on : 25 Jan, 2016, 4:07:40 PM
-    Author     : Piyush Galphat
+    Author     : @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

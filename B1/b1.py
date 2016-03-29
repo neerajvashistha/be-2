@@ -1,7 +1,3 @@
-"""
-Changes are in place function only:: Line Number:: 28,29, thats it
-
-"""
 import json
 inf=open("8q.json")
 board=json.loads(inf.read())
