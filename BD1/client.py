@@ -10,8 +10,8 @@ digest = sha1.sha1(MESSAGE)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((TCP_IP, TCP_PORT))
-s.send(MESSAGE+"\n")
-s.send(digest)
+s.send(MESSAGE+"\n")#could directly use s.send(MESSAGE+"\n"+digest) i dont know why but someone told me...
+s.send(digest)#could comment this.
 data = s.recv(BUFFER_SIZE)
 s.close()
 
