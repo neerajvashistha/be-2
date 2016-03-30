@@ -7,7 +7,7 @@ If you are using netbeans, and dont have glassfish server 4.0.0
 
   - Click Add Server.
 
-  - Under Server, select GlassFish v3 and click Next.
+  - Under Server, select GlassFish v4 and click Next.
 
   - Under Platform Location, browse to or enter the location of your GlassFish Server installation.
 
