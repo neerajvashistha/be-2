@@ -1,0 +1,13 @@
+prerequisites:
+	First disable the firewall on the machine used for running server code.
+	Check the IP addres and port number in socket's connect() and bind() functions in all the files.
+	Make sure all the code have the IP and port number of the machine running the server code.
+
+Steps:
+	Run the server code first and enter the multiplicand an multiplier in integer base 10 format.(The usual numbers like -5, 3 ,4...)
+	Run the multiplicand code next on another machine. 
+	Run the multiplier code on yet another machine.
+
+1. The multiplicand code will display the values of A and S. It will also display the packed string which is sent back to the server.
+2. The multiplier code will display the value of P
+3. The server code will display the connection received from both the clients. Finally, it also outputs the answer in binary format.

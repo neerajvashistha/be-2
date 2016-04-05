@@ -1,0 +1,35 @@
+cluster@Student-OptiPlex-301:~$ vim a4.c
+cluster@Student-OptiPlex-301:~$ mpicc a4.c 
+cluster@Student-OptiPlex-301:~$ mpiexec -n 2 -f machines.txt ./a.out 
+The data to square :  50 100
+The squared numbers :  2500 10000
+Runtime = 0.000131
+Node 1 will square 100
+cluster@Student-OptiPlex-301:~$ mpiexec -n 4 -f machines.txt ./a.out 
+The data to square :  50 100 200 400
+Node 1 will square 100
+Node 3 will square 400
+Node 2 will square 200
+The squared numbers :  2500 10000 40000 160000
+Runtime = 0.021928
+cluster@Student-OptiPlex-301:~$ mpiexec -n 6 -f machines.txt ./a.out 
+The data to square :  50 100 200 400 800 1600
+Node 2 will square 200
+Node 1 will square 100
+Node 3 will square 400
+Node 5 will square 1600
+Node 4 will square 800
+The squared numbers :  2500 10000 40000 160000 640000 2560000
+Runtime = 0.036011
+cluster@Student-OptiPlex-301:~$ mpiexec -n 8 -f machines.txt ./a.out 
+The data to square :  50 100 200 400 800 1600 3200 6400
+Node 1 will square 100
+Node 3 will square 400
+Node 4 will square 800
+Node 2 will square 200
+Node 5 will square 1600
+Node 6 will square 3200
+The squared numbers : Node 7 will square 6400
+ 2500 10000 40000 160000 640000 2560000 10240000 40960000
+Runtime = 0.081270
+cluster@Student-OptiPlex-301:~$

@@ -1,0 +1,12 @@
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-4$ mpicc a4.cpp 
+
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-4$ mpiexec -n 4 -f machinefile ./a.out 
+The data to square :  50 100 200 400
+Node 1 will square 100
+Node 2 will square 200
+Node 3 will square 400
+The squared numbers :  2500 10000 40000 160000
+Runtime = 0.000386
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-4$ 
+
+

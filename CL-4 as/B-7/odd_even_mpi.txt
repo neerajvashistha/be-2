@@ -1,0 +1,16 @@
+root@node0:/hpcuser# mpicc odd_even.c -o odd_even
+root@node0:/hpcuser# mpirun -n 2 -f machines.txt ./odd_even 43 54 63 28 79 81 32 47 84 17 25 49
+Debian GNU/Linux 7
+
+BeagleBoard.org BeagleBone Debian Image 2014-04-23
+
+Support/FAQ: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+[0] before iter 1: <[1] before iter 1: <17.000,25.000,28.000,32.000,47.000,49.000,84.000>
+[1] before iter 2: <17.000,25.000,32.000,47.000,49.000,84.000>
+43.000,54.000,63.000,79.000,81.000>
+[0] before iter 2: <28.000,43.000,54.000,63.000,79.000,81.000>
+[1] after iter 2: <49.000,54.000,63.000,79.000,81.000,[0] after iter 2: <84.000>
+17.000,25.000,28.000,32.000,43.000,47.000>
+[0]  all done  iter 3: <17.000,25.000,28.000,32.000,43.000,47.000,49.000,54.000,63.000,79.000,81.000,84.000>
+root@node0:/hpcuser# 
+

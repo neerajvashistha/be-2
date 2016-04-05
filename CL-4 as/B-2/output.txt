@@ -1,0 +1,20 @@
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-2$ mpicc stasson_mpi.c 
+
+
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-2$ mpiexec -n 2 -f machinefile ./a.out 
+Enter the 4 elements of first matrix: 1 2 3 4
+Enter the 4 elements of second matrix: 5 6 7 8
+
+The first matrix is
+
+1	2	
+3	4	
+The second matrix is
+
+5	6	
+7	8	
+After multiplication using 
+
+19	22	
+43	50	
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-2$

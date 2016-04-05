@@ -1,0 +1,26 @@
+Server side : 
+root@Student-301:/home/student/Documents/A-5 Booth's Algorithm# python server_booth.py
+Enter a multiplicant:5
+Enter a  multiplier:2
+Binary representation:  0b101 0b10
+Got connection from ('192.168.6.67', 36176)
+Got connection from ('192.168.6.79', 36224)
+00001010
+root@Student-301:/home/student/Documents/A-5 Booth's Algorithm# 
+
+-------------------------------------------------------------------------------
+
+Client1 : 
+root@student-302:/home/student/Documents# python client_multiplier.py check length of P:  [0, 0, 0, 0, 0, 0, 0, 0, 0]
+000000100
+root@student-OptiPlex-3010:/home/student/Documents# 
+
+------------------------------------------------------------------------------
+
+Client2 : 
+root@student-303:/home/student/Documents# python client_multiplicand.py 
+0101 0010
+A:  ['0', '1', '0', '1', '0', '0', '0', '0', '0']
+S:  ['1', '0', '1', '1', '0', '0', '0', '0', '0']
+4A010100000S101100000
+root@student-303:/home/student/Documents# 

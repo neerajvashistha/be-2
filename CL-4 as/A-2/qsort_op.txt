@@ -1,0 +1,38 @@
+student@student-OptiPlex-390:~$ g++ -fopenmp qsort.cpp
+student@student-OptiPlex-390:~$ ./a.out
+Enter the no. of elements in array	10
+Enter the elements of array:
+90
+2
+45
+75
+66
+89
+35
+64
+50
+22
+
+
+The Array is:
+ 90 2 45 75 66 89 35 64 50 22
+Using Quick Sort
+
+Thread Number: 0  pivot element selected : 22
+
+Thread Number: 1  pivot element selected : 90
+
+Thread Number: 2  pivot element selected : 50
+
+Thread Number: 3  pivot element selected : 35
+
+Thread Number: 6  pivot element selected : 66
+
+Thread Number: 8  pivot element selected : 75
+The Sorted  
+
+The Array is:
+ 2 22 35 45 50 64 66 75 89 90
+Excecution time : 0.00561669 seconds Would you like to continue? (1/0 y/n)
+n
+student@student-OptiPlex-390:~$

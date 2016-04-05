@@ -1,0 +1,6 @@
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-4$ g++ test.c
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-4$ ./a.out
+
+ Hello World! 
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-4$ 
+

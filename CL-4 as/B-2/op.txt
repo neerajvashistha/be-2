@@ -1,0 +1,20 @@
+student@Student-OptiPlex-301:~$ vim strassens.c
+student@Student-OptiPlex-301:~$ mpicc strassens.c
+student@Student-OptiPlex-301:~$ mpiexec -n 2 -f machines.txt ./a.out
+Enter the 4 elements of first matrix: 2 5 2 7
+Enter the 4 elements of second matrix: 4 5 1 9
+
+The first matrix is
+
+2	5	
+2	7	
+The second matrix is
+
+4	5	
+1	9	
+After multiplication using 
+
+13	55	
+15	73	
+student@Student-OptiPlex-301:~$ 
+

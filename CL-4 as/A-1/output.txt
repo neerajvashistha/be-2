@@ -1,0 +1,25 @@
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-1$ mpicc bst_mpi.c 
+
+
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-1$ mpiexec -f machinefile -n 4 ./a.out 
+
+ Insert the key element to be searched : 
+ You entered : 0
+
+ Insert the key element to be searched : 
+ You entered : 0
+
+ Insert the key element to be searched : 
+ You entered : 0
+6
+
+ Insert the key element to be searched : 
+ You entered : 6
+
+Inorder at rank-0 processor:	
+Inorder at rank-1 processor:	0	2	4	7	9	
+key 0 found at rank-1 processor
+1	3	5	6	8	
+key 6 found at rank-0 processor
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-1$ 
+

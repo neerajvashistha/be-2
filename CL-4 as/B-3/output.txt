@@ -1,0 +1,24 @@
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-3$ g++ quicksort_sample.cpp -fopenmp
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-3$ ./a.out 
+Enter the no. of elements in array	7
+Enter the elements of array:
+4 5 6 7 8 0 1
+
+
+The Array is:
+ 4 5 6 7 8 0 1
+Using Quick Sort
+
+Thread Number: 0  pivot element selected : 1
+
+Thread Number: 2  pivot element selected : 5
+
+Thread Number: 4  pivot element selected : 7
+The Sorted  
+
+The Array is:
+ 0 1 4 5 6 7 8
+Excecution time : 0.00218175 seconds Would you like to continue? (1/0 y/n)
+0
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-3$ 
+

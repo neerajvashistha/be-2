@@ -1,0 +1,23 @@
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-2$ g++ qsort.cpp -fopenmp
+mpiu@DB21:/mirror/mpiu/CL4 prog/A-2$ ./a.out 
+Enter the no. of elements in array	5
+Enter the elements of array:
+7 9 0 -3 2
+
+
+The Array is:
+ 7 9 0 -3 2
+Using Quick Sort
+
+Thread Number: 0  pivot element selected : 2
+
+Thread Number: 1  pivot element selected : -3
+
+Thread Number: 2  pivot element selected : 7
+The Sorted  
+
+The Array is:
+ -3 0 2 7 9
+Excecution time : 0.00439173 seconds Would you like to continue? (1/0 y/n)
+0
+

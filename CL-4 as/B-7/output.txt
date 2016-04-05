@@ -1,0 +1,25 @@
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-7$ mpicc odd_even.c 
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-7$ mpiexec -n 4 -f machinefile ./a.out 
+[0] before iter 1: < 0.000>
+[0] before iter 2: < 0.000>
+[0] before iter 3: < 0.000>
+[0] before iter 4: < 0.000>
+[0] after iter 4: < 0.000>
+[1] before iter 1: < 0.000>
+[1] before iter 2: < 0.000>
+[1] before iter 3: < 0.000>
+[1] before iter 4: < 0.000>
+[1] after iter 4: < 0.000>
+[2] before iter 1: < 0.000>
+[2] before iter 2: < 0.000>
+[2] before iter 3: < 0.000>
+[2] before iter 4: < 0.000>
+[2] after iter 4: < 0.000>
+[3] before iter 1: < 0.000>
+[3] before iter 2: < 0.000>
+[3] before iter 3: < 0.000>
+[3] before iter 4: < 0.000>
+[3] after iter 4: < 0.000>
+[0]  all done  iter 5: < 0.000>
+mpiu@DB21:/mirror/mpiu/CL4 prog/B-7$ 
+
