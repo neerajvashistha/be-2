@@ -1,3 +1,18 @@
+#Requirements:
+
+```
+sudo pip install pymongo
+```
+
+mongodb from [https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/]
+[https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/]:https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+
+start the server
+
+```
+mongod --dbpath /home/cipher/mongodb --port 27027 --bind_ip 127.0.0.1 --noprealloc
+```
+
 #Dining philosophers
 
 The dining philosophers problem illustrates non-composability of low-level synchronization primitives like semaphores. It is a modification of a problem posed by Edsger Dijkstra.
