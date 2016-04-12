@@ -62,3 +62,4 @@ if __name__ == "__main__":
     for i in xrange(5):
         "Print 100 random numbers as an example"
         print extract_number()
+        

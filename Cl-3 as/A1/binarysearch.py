@@ -50,9 +50,3 @@ findEle = raw_input("enter element to be searched ")
 
 print(binarySearch(alist,int(findEle)))
 
-#output
-'''
-cipher@blackfury-HP-eNVy:~/be-2$ python binarysearch.py 
-(True, 3)
-(False, 0)
-'''
