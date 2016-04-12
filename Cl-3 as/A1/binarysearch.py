@@ -42,9 +42,13 @@ def binarySearch(alist, item):
 s = raw_input("enter few elements ")
 alist = s.split(",")
 
+alist = map(int, alist)
+
+print alist
+
 findEle = raw_input("enter element to be searched ")
 
-print(binarySearch(alist,findEle))
+print(binarySearch(alist,int(findEle)))
 
 #output
 '''
