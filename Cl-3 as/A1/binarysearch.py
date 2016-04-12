@@ -1,12 +1,12 @@
 def binarySearch(alist, item):
-"""
-binartsearch using divide and conqure(non-recursive).
+	'''
+	binartsearch using divide and conqure(non-recursive).
 
-    @param: alist, unsorted list
-    @param: item, an element to be searched in alist
+	    @param: alist, unsorted list
+	    @param: item, an element to be searched in alist
 
-    returns: bool, position, the presence of item in alist and position.
-"""
+	    returns: bool, position, the presence of item in alist and position.
+	'''
 	pos = 0
 	first = 0
 	found = False
@@ -35,9 +35,16 @@ binartsearch using divide and conqure(non-recursive).
 	#print adict
 	return found,pos
 
-testlist = [42,72, 2, 11, 55, 32, 76]
-print(binarySearch(testlist, 2))
-print(binarySearch(testlist, 13))
+#testlist = [42,72, 2, 11, 55, 32, 76]
+#print(binarySearch(testlist, 2))
+#print(binarySearch(testlist, 13))
+
+s = raw_input("enter few elements ")
+alist = s.split(",")
+
+findEle = raw_input("enter element to be searched ")
+
+print(binarySearch(alist,findEle))
 
 #output
 '''
