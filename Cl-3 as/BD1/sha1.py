@@ -1,7 +1,7 @@
 def sha1(data):
     bytes = ""
 
-    h0 = 0x67452301
+    h0 = 0x67452301		# Initialize variables
     h1 = 0xEFCDAB89
     h2 = 0x98BADCFE
     h3 = 0x10325476
@@ -17,6 +17,7 @@ def sha1(data):
     #append the original length
     pBits+='{0:064b}'.format(len(bits)-1)
 
+    
     def chunks(l, n):
         return [l[i:i+n] for i in range(0, len(l), n)]
 
@@ -42,19 +43,19 @@ def sha1(data):
         for i in range(0, 80):
             if 0 <= i <= 19:
                 #f = (b & c) | ((~b) & d)
-		f = b ^ c ^ d
-                k = 0x5A827999
+				f = b ^ c ^ d
+				k = 0x5A827999
             elif 20 <= i <= 39:
                 f = b ^ c ^ d
                 k = 0x6ED9EBA1
             elif 40 <= i <= 59:
                 #f = (b & c) | (b & d) | (c & d)
-		f = b ^ c ^ d
-                k = 0x8F1BBCDC
+				f = b ^ c ^ d
+				k = 0x8F1BBCDC
             elif 60 <= i <= 79:
                 #f = b ^ c ^ d
-		f = b ^ c ^ d
-                k = 0xCA62C1D6
+				f = b ^ c ^ d
+				k = 0xCA62C1D6
 
             temp = rol(a, 5) + f + e + k + w[i] & 0xffffffff
             e = d
@@ -70,3 +71,4 @@ def sha1(data):
         h4 = h4 + e & 0xffffffff
 
     return '%08x%08x%08x%08x%08x' % (h0, h1, h2, h3, h4)
+#print(sha1("hello"))

@@ -4,7 +4,7 @@
 Based on the pseudocode in https://en.wikipedia.org/wiki/Mersenne_Twister.
 Generates uniformly distributed 32-bit integers in the range [0, 232 − 1] with the MT19937 algorithm
 
-Yaşar Arabacı <yasar11732 et gmail nokta com>
+
 """
 # Create a length 624 list to store the state of the generator
 MT = [0 for i in xrange(624)]
@@ -60,6 +60,6 @@ if __name__ == "__main__":
     now = datetime.now()
     initialize_generator(now.microsecond)
     for i in xrange(5):
-        "Print 100 random numbers as an example"
+        "Print 5 random numbers as an example"
         print extract_number()
         

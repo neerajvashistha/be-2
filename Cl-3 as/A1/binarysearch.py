@@ -42,6 +42,14 @@ def binarySearch(alist, item):
 s = raw_input("enter few elements ")
 alist = s.split(",")
 
+alist1=[]
+for i in range(len(alist)):
+	if alist[i].isdigit():
+		alist1.append(int(alist[i]))
+	else:
+		print "Invalid type of element"
+		exit()
+print "alist1 ",alist1
 alist = map(int, alist)
 
 print alist
