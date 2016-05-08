@@ -1,6 +1,16 @@
 # Go Mock yourself
 
 `cat /dev/urandom | tr -dc 'A-F0-9' | fold -w 32 | head -n 2 `
+```
+a@b:~$ ephKey=$(cat /dev/urandom | tr -dc 'A-F0-9' | fold -w 32 | head -n 1)
+a@b:~$ privKey=$(cat /dev/urandom | tr -dc 'A-F0-9' | fold -w 32 | head -n 1)
+a@b:~$ echo $ephKey
+E6AD2AD8801575AE4AA7C9E97D64744E
+a@b:~$ echo $privKey
+E3657D2C626310A465804A7AA858133D
+a@b:~$ 
+
+```
 
 # Mersenne Twister
 ```
