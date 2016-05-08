@@ -2,7 +2,7 @@
 
 `cat /dev/urandom | tr -dc 'A-F0-9' | fold -w 32 | head -n 2 `
 
-
+# Mersenne Twister
 ```
  // Create a length n array to store the state of the generator
  int[0..n-1] MT
